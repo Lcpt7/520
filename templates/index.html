@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给{{ confession.her_name }}的一封心动来信</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <main>
+    <section class="hero" id="top">
+      <nav class="nav">
+        <span class="brand">520</span>
+        <a href="#letter">那封信</a>
+        <a href="#moments">小宇宙</a>
+        <a href="#answer">你的回答</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">这不是一个普通网页</p>
+          <h1>我把藏了很久的喜欢，认真写给你看。</h1>
+          <p class="lead">
+            从第一次注意到你开始，我的世界就多了一个柔软的坐标。
+            今天，我想借这个小小的网站，郑重又笨拙地告诉你：我喜欢你。
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#letter">打开这封信</a>
+            <button class="btn ghost" id="playBtn" type="button">点亮心跳</button>
+          </div>
+        </div>
+
+        <div class="heart-stage" aria-label="一颗发光的心">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="heart" id="heart">❤</div>
+          <p>暗恋不是沉默，是每一次看见你时，心里都开了一盏灯。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="letter-section" id="letter">
+      <div class="section-heading">
+        <p>To {{ confession.her_name }}</p>
+        <h2>有些话，我想慢慢说</h2>
+      </div>
+
+      <article class="letter">
+        <p>我喜欢你，不是一时兴起。</p>
+        <p>
+          是在人群里会下意识找你，是听到一首歌会突然想起你，
+          是很多个普通日子里，我都希望能把开心的事第一个讲给你听。
+        </p>
+        <p>
+          我不知道你会不会刚好也喜欢我，但我知道，如果一直不说，
+          这份心意就只能停在原地。所以今天，我想勇敢一点。
+        </p>
+        <p>
+          如果可以，我想陪你吃很多顿饭，走很多段路，看很多次日落。
+          也想在你累的时候认真听你说话，在你开心的时候比你更开心。
+        </p>
+        <p class="signature">-- {{ confession.your_name }}</p>
+      </article>
+    </section>
+
+    <section class="moments" id="moments">
+      <div class="section-heading">
+        <p>Little Universe</p>
+        <h2>关于喜欢你的几个瞬间</h2>
+      </div>
+
+      <div class="moment-grid">
+        <article>
+          <span>01</span>
+          <h3>看见你</h3>
+          <p>世界会突然安静一点，然后所有温柔都好像有了方向。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>想到你</h3>
+          <p>连很普通的风景，也会因为和你有关而变得特别。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>靠近你</h3>
+          <p>我想成为一个更好的人，足够真诚，也足够坚定。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="answer" id="answer">
+      <div class="answer-panel">
+        <p class="eyebrow">最后一个问题</p>
+        <h2>你愿意给我一个机会，认真认识彼此吗？</h2>
+        <div class="answer-actions">
+          <button data-answer="yes" type="button">愿意</button>
+          <button data-answer="think" type="button">让我想想</button>
+          <button data-answer="friend" type="button">先做朋友</button>
+        </div>
+        <p class="reply" id="reply">无论答案是什么，谢谢你读到这里。</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
